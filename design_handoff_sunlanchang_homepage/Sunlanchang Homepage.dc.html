@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><style>body{margin:0;background:#f7f5f2;color:#211f1c;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}a{color:#211f1c;text-decoration:none}a:hover{color:oklch(0.55 0.09 250)}</style></helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column" data-screen-label="Homepage">
+  <nav style="display:flex;justify-content:space-between;align-items:center;padding:22px 56px;max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box">
+    <span style="font-size:15px;font-weight:600;letter-spacing:-.01em">LS</span>
+    <div style="display:flex;gap:30px;align-items:center;font-size:14px;color:rgba(33,31,28,.7)">
+      <a href="#work" style="color:rgba(33,31,28,.7)">Work</a><a href="#notes" style="color:rgba(33,31,28,.7)">Notes</a><a href="#about" style="color:rgba(33,31,28,.7)">About</a>
+      <span style="font-size:12px;color:rgba(33,31,28,.45)">EN / 中文</span>
+    </div>
+  </nav>
+  <header style="padding:110px 56px 100px;max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box" data-reveal="1">
+    <h1 style="margin:0;font-size:84px;line-height:1.02;letter-spacing:-.035em;font-weight:600;max-width:900px">I explore ideas by building products.</h1>
+    <div style="display:flex;gap:40px;margin-top:36px;align-items:baseline;flex-wrap:wrap">
+      <p style="margin:0;font-size:18px;line-height:1.55;color:rgba(33,31,28,.55);max-width:460px;text-wrap:pretty">Lanchang Sun — product builder, former Microsoft engineer, student of durable businesses.</p>
+      <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:rgba(33,31,28,.4)">SUNLANCHANG.COM</span>
+    </div>
+  </header>
+  <section id="work" style="background:#1d1b18;color:#f3f1ed">
+    <div style="padding:88px 56px;max-width:1180px;margin:0 auto;box-sizing:border-box" data-reveal="1">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;flex-wrap:wrap;gap:16px">
+        <div style="display:flex;align-items:baseline;gap:18px"><span style="width:8px;height:8px;border-radius:99px;background:oklch(0.72 0.13 250);display:inline-block;position:relative;top:-2px"></span><h2 style="margin:0;font-size:44px;letter-spacing:-.02em;font-weight:600">Ciyo</h2><span style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,241,237,.45)">{{ ciyoStatus }}</span></div>
+        <a href="https://ciyo.ai" style="color:oklch(0.72 0.13 250);font-size:15px;font-weight:500">ciyo.ai →</a>
+      </div>
+      <p style="margin:0 0 40px;font-size:19px;line-height:1.55;color:rgba(243,241,237,.65);max-width:600px;text-wrap:pretty">An AI creative workspace where anyone can turn an idea into logos, images, and videos — no design background needed.</p>
+      <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(243,241,237,.14);background:repeating-linear-gradient(-45deg,#26231f 0 14px,#211e1a 14px 28px);aspect-ratio:16/8;display:flex;align-items:center;justify-content:center">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:13px;color:rgba(243,241,237,.5);background:rgba(29,27,24,.85);padding:8px 16px;border-radius:8px">ciyo.ai — product screenshot</span>
+      </div>
+      <div style="display:flex;gap:56px;margin-top:40px;flex-wrap:wrap">
+        <div style="max-width:240px"><p style="margin:0 0 6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,241,237,.4)">Hypothesis</p><p style="margin:0;font-size:14px;line-height:1.55;color:rgba(243,241,237,.7)">People want creative control without becoming designers first.</p></div>
+        <div style="max-width:240px"><p style="margin:0 0 6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,241,237,.4)">Exists today</p><p style="margin:0;font-size:14px;line-height:1.55;color:rgba(243,241,237,.7)">Logo, image, and video creation from a single prompt.</p></div>
+        <div style="max-width:240px"><p style="margin:0 0 6px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,241,237,.4)">Testing</p><p style="margin:0;font-size:14px;line-height:1.55;color:rgba(243,241,237,.7)">Which workflow gives enough value that people return.</p></div>
+      </div>
+    </div>
+  </section>
+  <section style="padding:88px 56px 80px;max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box" data-reveal="1">
+    <h3 style="margin:0 0 28px;font-size:26px;font-weight:600;letter-spacing:-.01em">Other experiments</h3>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div style="border:1px solid rgba(33,31,28,.12);border-radius:14px;padding:26px;background:#fdfcfa;display:flex;flex-direction:column;gap:10px"><span style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(33,31,28,.5)"><span style="width:7px;height:7px;border-radius:99px;background:oklch(0.72 0.13 150);display:inline-block"></span>In progress</span><span style="font-size:18px;font-weight:600">AI SEO Assistant</span><span style="font-size:14px;line-height:1.5;color:rgba(33,31,28,.55)">SEO opportunities and organic traffic for independent site owners.</span></div>
+      <div style="border:1px solid rgba(33,31,28,.12);border-radius:14px;padding:26px;background:#fdfcfa;display:flex;flex-direction:column;gap:10px"><span style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(33,31,28,.5)"><span style="width:7px;height:7px;border-radius:99px;background:oklch(0.72 0.13 60);display:inline-block"></span>In progress</span><span style="font-size:18px;font-weight:600">Options Premium Explorer</span><span style="font-size:14px;line-height:1.5;color:rgba(33,31,28,.55)">Assess option-selling opportunities in businesses you understand.</span></div>
+      <a href="https://buzi.sunlanchang.com" style="border:1px solid rgba(33,31,28,.12);border-radius:14px;padding:26px;background:#fdfcfa;display:flex;flex-direction:column;gap:10px" style-hover="border-color:rgba(33,31,28,.3);color:#211f1c"><span style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(33,31,28,.5)"><span style="width:7px;height:7px;border-radius:99px;background:oklch(0.72 0.13 320);display:inline-block"></span>Live</span><span style="font-size:18px;font-weight:600">Buzi</span><span style="font-size:14px;line-height:1.5;color:rgba(33,31,28,.55)">An earlier AI experiment, live at buzi.sunlanchang.com.</span></a>
+    </div>
+  </section>
+  <section id="notes" style="padding:0 56px 88px;max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:56px" data-reveal="1">
+    <div>
+      <h3 style="margin:0 0 20px;font-size:26px;font-weight:600;letter-spacing:-.01em">Notes</h3>
+      <div style="display:flex;flex-direction:column">
+        <div style="padding:14px 0;border-top:1px solid rgba(33,31,28,.1);display:flex;justify-content:space-between;gap:20px"><a href="#notes" style="font-size:16px">What Microsoft taught me — and what I had to unlearn</a><span style="font-size:13px;color:rgba(33,31,28,.4);flex:none">Aug 2026</span></div>
+        <div style="padding:14px 0;border-top:1px solid rgba(33,31,28,.1);display:flex;justify-content:space-between;gap:20px"><a href="#notes" style="font-size:16px">Selling options is selling insurance</a><span style="font-size:13px;color:rgba(33,31,28,.4);flex:none">Jul 2026</span></div>
+        <div style="padding:14px 0;border-top:1px solid rgba(33,31,28,.1);border-bottom:1px solid rgba(33,31,28,.1);display:flex;justify-content:space-between;gap:20px"><a href="#notes" style="font-size:16px">Ciyo build log №1 — marketing with zero users</a><span style="font-size:13px;color:rgba(33,31,28,.4);flex:none">Jul 2026</span></div>
+      </div>
+    </div>
+    <div id="about">
+      <h3 style="margin:0 0 20px;font-size:26px;font-weight:600;letter-spacing:-.01em">About</h3>
+      <p style="margin:0;font-size:16px;line-height:1.65;color:rgba(33,31,28,.65);text-wrap:pretty">Microsoft taught me how large technology organizations work. Leaving taught me what kind of work I actually care about. Since then, I've chosen ownership over prestige and trusted collaboration over convenient partnership. You can call me Chris.</p>
+    </div>
+  </section>
+  <footer style="border-top:1px solid rgba(33,31,28,.08);margin-top:auto">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:26px 56px;max-width:1180px;margin:0 auto;box-sizing:border-box;font-size:13px;color:rgba(33,31,28,.5)">
+      <span>© 2026 Lanchang Sun</span>
+      <div style="display:flex;gap:24px"><a href="mailto:sunlanchang@outlook.com" style="color:rgba(33,31,28,.6)">sunlanchang@outlook.com</a><a href="https://x.com/chris___sun" style="color:rgba(33,31,28,.6)">@chris___sun</a></div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ciyoStatus&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Building now&quot;, &quot;Beta&quot;, &quot;Live&quot;], &quot;default&quot;: &quot;Building now&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Content&quot;}, &quot;motion&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { ciyoStatus: this.props.ciyoStatus ?? "Building now" };
+  }
+  componentDidMount() {
+    if ((this.props.motion ?? true) === false) return;
+    const els = document.querySelectorAll("[data-reveal]");
+    els.forEach(el => { el.style.opacity = "0"; el.style.transform = "translateY(18px)"; el.style.transition = "opacity .7s ease, transform .7s ease"; });
+    this._io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = "1"; e.target.style.transform = "none"; this._io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    els.forEach(el => this._io.observe(el));
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+}
+</script>
+</body>
+</html>

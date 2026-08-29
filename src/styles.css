@@ -1,0 +1,477 @@
+@import "./styles/tokens.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nav ------------------------------------------------------------------ */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px var(--gutter);
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.nav__brand {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.nav__links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--ink-70);
+}
+
+.nav__links a {
+  color: var(--ink-70);
+}
+
+.nav__links a:hover {
+  color: var(--link-hover);
+}
+
+.nav__lang {
+  font-size: 12px;
+  color: var(--ink-45);
+}
+
+/* Hero ----------------------------------------------------------------- */
+
+.hero {
+  padding: 110px var(--gutter) 100px;
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 84px;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  max-width: 900px;
+}
+
+.hero__meta {
+  display: flex;
+  gap: 40px;
+  margin-top: 36px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.hero__intro {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--ink-55);
+  max-width: 460px;
+  text-wrap: pretty;
+}
+
+.hero__domain {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-40);
+}
+
+/* Ciyo dark band ------------------------------------------------------- */
+
+.band {
+  background: var(--dark-bg);
+  color: var(--dark-ink);
+}
+
+.band__inner {
+  padding: 88px var(--gutter);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.band__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.band__title {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+}
+
+.band__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--accent-ciyo);
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+
+.band__name {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.band__status {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark-ink-45);
+}
+
+.band__link,
+.band__link:hover {
+  color: var(--accent-ciyo);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.band__lede {
+  margin: 0 0 40px;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--dark-ink-65);
+  max-width: 600px;
+  text-wrap: pretty;
+}
+
+.shot {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--dark-hairline);
+  aspect-ratio: 16 / 8;
+}
+
+.shot--placeholder {
+  background: repeating-linear-gradient(-45deg, #26231f 0 14px, #211e1a 14px 28px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shot--image {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+.shot__label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--dark-ink-50);
+  background: var(--dark-shot-label-bg);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.band__facts {
+  display: flex;
+  gap: 56px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.fact {
+  max-width: 240px;
+}
+
+.fact__label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark-ink-40);
+}
+
+.fact__body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--dark-ink-70);
+}
+
+/* Other experiments ---------------------------------------------------- */
+
+.experiments {
+  padding: 88px var(--gutter) 80px;
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.section-title {
+  margin: 0 0 28px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.section-title--tight {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid var(--hairline-12);
+  border-radius: var(--radius);
+  padding: 26px;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card--link {
+  color: var(--ink);
+  transition: border-color 0.2s ease;
+}
+
+.card--link:hover {
+  color: var(--ink);
+  border-color: var(--hairline-30);
+}
+
+.card__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--ink-50);
+}
+
+.card__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 99px;
+  display: inline-block;
+}
+
+.card__dot--seo {
+  background: var(--accent-seo);
+}
+
+.card__dot--options {
+  background: var(--accent-options);
+}
+
+.card__dot--buzi {
+  background: var(--accent-buzi);
+}
+
+.card__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-55);
+}
+
+/* Notes + About -------------------------------------------------------- */
+
+.notes-about {
+  padding: 0 var(--gutter) 88px;
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+}
+
+.note {
+  padding: 14px 0;
+  border-top: 1px solid var(--hairline-10);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.note:last-child {
+  border-bottom: 1px solid var(--hairline-10);
+}
+
+.note__title {
+  font-size: 16px;
+}
+
+.note__date {
+  font-size: 13px;
+  color: var(--ink-40);
+  flex: none;
+}
+
+.about__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-65);
+  text-wrap: pretty;
+}
+
+/* Footer --------------------------------------------------------------- */
+
+.footer {
+  border-top: 1px solid var(--hairline-8);
+  margin-top: auto;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px var(--gutter);
+  max-width: var(--content-max);
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 13px;
+  color: var(--ink-50);
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__links a {
+  color: var(--ink-60);
+}
+
+.footer__links a:hover {
+  color: var(--link-hover);
+}
+
+/* Scroll reveal -------------------------------------------------------- */
+/* `html.js` is set by an inline head script, so the HTML stays visible
+   without JavaScript and never flashes before the observer runs. */
+
+html.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+html.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  html.js [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Small screens (the reference is desktop-only; these rules do not
+   change anything at 821px and wider) ---------------------------------- */
+
+@media (max-width: 820px) {
+  :root {
+    --gutter: 24px;
+  }
+
+  .nav__links {
+    gap: 20px;
+  }
+
+  .hero {
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+
+  .hero__title {
+    font-size: clamp(44px, 11vw, 84px);
+  }
+
+  .band__inner,
+  .experiments {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .band__name {
+    font-size: 36px;
+  }
+
+  .cards,
+  .notes-about {
+    grid-template-columns: 1fr;
+  }
+
+  .notes-about {
+    gap: 48px;
+    padding-bottom: 64px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

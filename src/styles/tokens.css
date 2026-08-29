@@ -1,0 +1,49 @@
+/* Design tokens — see design_handoff_sunlanchang_homepage/README.md */
+:root {
+  /* Surfaces */
+  --bg: #f7f5f2;
+  --bg-card: #fdfcfa;
+
+  /* Ink on light */
+  --ink: #211f1c;
+  --ink-70: rgba(33, 31, 28, 0.7);
+  --ink-65: rgba(33, 31, 28, 0.65);
+  --ink-60: rgba(33, 31, 28, 0.6);
+  --ink-55: rgba(33, 31, 28, 0.55);
+  --ink-50: rgba(33, 31, 28, 0.5);
+  --ink-45: rgba(33, 31, 28, 0.45);
+  --ink-40: rgba(33, 31, 28, 0.4);
+
+  /* Hairlines on light */
+  --hairline-8: rgba(33, 31, 28, 0.08);
+  --hairline-10: rgba(33, 31, 28, 0.1);
+  --hairline-12: rgba(33, 31, 28, 0.12);
+  --hairline-30: rgba(33, 31, 28, 0.3);
+
+  /* Dark band */
+  --dark-bg: #1d1b18;
+  --dark-ink: #f3f1ed;
+  --dark-ink-70: rgba(243, 241, 237, 0.7);
+  --dark-ink-65: rgba(243, 241, 237, 0.65);
+  --dark-ink-50: rgba(243, 241, 237, 0.5);
+  --dark-ink-45: rgba(243, 241, 237, 0.45);
+  --dark-ink-40: rgba(243, 241, 237, 0.4);
+  --dark-hairline: rgba(243, 241, 237, 0.14);
+  --dark-shot-label-bg: rgba(29, 27, 24, 0.85);
+
+  /* Accents — one per product, same chroma and lightness */
+  --accent-ciyo: oklch(0.72 0.13 250);
+  --accent-seo: oklch(0.72 0.13 150);
+  --accent-options: oklch(0.72 0.13 60);
+  --accent-buzi: oklch(0.72 0.13 320);
+  --link-hover: oklch(0.55 0.09 250);
+
+  /* Type */
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, Menlo, monospace;
+
+  /* Layout */
+  --radius: 14px;
+  --content-max: 1180px;
+  --gutter: 56px;
+}
