@@ -70,8 +70,8 @@ export const experiments: Experiment[] = [
     name: "Buzi",
     status: "Live",
     accent: "buzi",
-    description: "An earlier AI experiment, live at buzi.sunlanchang.com.",
-    href: "https://buzi.sunlanchang.com",
+    description: "An earlier AI experiment, live at sunlanchang.com/buzi.",
+    href: "https://sunlanchang.com/buzi",
   },
 ];
 
