@@ -46,18 +46,19 @@ export const ciyo = {
 export type Experiment = {
   name: string;
   status: string;
-  accent: "seo" | "options" | "buzi";
+  accent: "options" | "buzi";
   description: string;
   href?: string;
 };
 
 export const experiments: Experiment[] = [
   {
-    name: "AI SEO Assistant",
-    status: "In progress",
-    accent: "seo",
+    name: "Buzi",
+    status: "Live",
+    accent: "buzi",
     description:
-      "SEO opportunities and organic traffic for independent site owners.",
+      "An AI SEO assistant for independent site owners to find opportunities and grow organic traffic.",
+    href: "https://sunlanchang.com/buzi",
   },
   {
     name: "Options Premium Explorer",
@@ -65,13 +66,6 @@ export const experiments: Experiment[] = [
     accent: "options",
     description:
       "Assess option-selling opportunities in businesses you understand.",
-  },
-  {
-    name: "Buzi",
-    status: "Live",
-    accent: "buzi",
-    description: "An earlier AI experiment, live at sunlanchang.com/buzi.",
-    href: "https://sunlanchang.com/buzi",
   },
 ];
 
