@@ -108,11 +108,17 @@ a:hover {
   color: var(--ink-40);
 }
 
-/* Ciyo dark band ------------------------------------------------------- */
+/* Featured project bands ---------------------------------------------- */
 
 .band {
+  --project-accent: var(--accent-ciyo);
   background: var(--dark-bg);
   color: var(--dark-ink);
+}
+
+.band--valuery {
+  --project-accent: var(--accent-valuery);
+  border-top: 1px solid var(--dark-hairline);
 }
 
 .band__inner {
@@ -141,7 +147,7 @@ a:hover {
   width: 8px;
   height: 8px;
   border-radius: 99px;
-  background: var(--accent-ciyo);
+  background: var(--project-accent);
   display: inline-block;
   position: relative;
   top: -2px;
@@ -163,7 +169,7 @@ a:hover {
 
 .band__link,
 .band__link:hover {
-  color: var(--accent-ciyo);
+  color: var(--project-accent);
   font-size: 15px;
   font-weight: 500;
 }
@@ -222,7 +228,7 @@ a:hover {
 }
 
 .shot__link:hover {
-  color: var(--accent-ciyo);
+  color: var(--project-accent);
 }
 
 .band__facts {
@@ -274,7 +280,7 @@ a:hover {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -311,10 +317,6 @@ a:hover {
   height: 7px;
   border-radius: 99px;
   display: inline-block;
-}
-
-.card__dot--options {
-  background: var(--accent-options);
 }
 
 .card__dot--buzi {

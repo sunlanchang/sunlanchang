@@ -17,9 +17,23 @@ export const hero = {
   intro: site.description,
 };
 
-export const ciyo = {
+export type FeaturedProject = {
+  name: string;
+  status: string;
+  accent: "ciyo" | "valuery";
+  url: string;
+  linkLabel: string;
+  lede: string;
+  previewLabel: string;
+  previewTitle: string;
+  previewLinkLabel: string;
+  facts?: { label: string; body: string }[];
+};
+
+export const ciyo: FeaturedProject = {
   name: "Ciyo",
   status: "Building now",
+  accent: "ciyo",
   url: "https://ciyo.ai",
   linkLabel: "ciyo.ai →",
   lede: "An AI creative workspace where anyone can turn an idea into logos, images, and videos — no design background needed.",
@@ -42,10 +56,22 @@ export const ciyo = {
   ],
 };
 
+export const valuery: FeaturedProject = {
+  name: "Valuery",
+  status: "In progress",
+  accent: "valuery",
+  url: "https://valuery.ai",
+  linkLabel: "valuery.ai →",
+  lede: "A value-investing iPhone app in development, built around business quality, fair-value estimates, and a margin of safety.",
+  previewLabel: "valuery.ai · live preview",
+  previewTitle: "Valuery live website preview",
+  previewLinkLabel: "Open website ↗",
+};
+
 export type Experiment = {
   name: string;
   status: string;
-  accent: "options" | "buzi";
+  accent: "buzi";
   description: string;
   href?: string;
 };
@@ -58,14 +84,6 @@ export const experiments: Experiment[] = [
     description:
       "An AI SEO assistant for independent site owners to find opportunities and grow organic traffic.",
     href: "https://sunlanchang.com/buzi",
-  },
-  {
-    name: "Valuery",
-    status: "In progress",
-    accent: "options",
-    description:
-      "Assess option-selling opportunities in businesses you understand.",
-    href: "https://valuery.ai",
   },
 ];
 

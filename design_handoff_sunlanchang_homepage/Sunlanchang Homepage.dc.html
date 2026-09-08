@@ -35,7 +35,7 @@
           <span style="font-family:ui-monospace,Menlo,monospace;font-size:13px;color:rgba(243,241,237,.65)">ciyo.ai · live preview</span>
           <a href="https://ciyo.ai" target="_blank" rel="noopener noreferrer" style="color:#f3f1ed;font-size:13px;white-space:nowrap">Open website ↗</a>
         </div>
-        <div data-ciyo-preview style="position:relative;overflow:hidden;aspect-ratio:16/10;background:#f7f5f2">
+        <div data-project-preview style="position:relative;overflow:hidden;aspect-ratio:16/10;background:#f7f5f2">
           <iframe src="https://ciyo.ai" title="Ciyo live website preview" width="1440" height="900" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;inset:0 auto auto 0;display:block;border:0;transform-origin:top left"></iframe>
         </div>
       </div>
@@ -46,11 +46,28 @@
       </div>
     </div>
   </section>
+  <section id="valuery" style="background:#1d1b18;color:#f3f1ed;border-top:1px solid rgba(243,241,237,.14)">
+    <div style="padding:88px 56px;max-width:1180px;margin:0 auto;box-sizing:border-box" data-reveal="1">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;flex-wrap:wrap;gap:16px">
+        <div style="display:flex;align-items:baseline;gap:18px"><span style="width:8px;height:8px;border-radius:99px;background:oklch(0.72 0.13 60);display:inline-block;position:relative;top:-2px"></span><h2 style="margin:0;font-size:44px;letter-spacing:-.02em;font-weight:600">Valuery</h2><span style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(243,241,237,.45)">In progress</span></div>
+        <a href="https://valuery.ai" style="color:oklch(0.72 0.13 60);font-size:15px;font-weight:500">valuery.ai →</a>
+      </div>
+      <p style="margin:0 0 40px;font-size:19px;line-height:1.55;color:rgba(243,241,237,.65);max-width:600px;text-wrap:pretty">A value-investing iPhone app in development, built around business quality, fair-value estimates, and a margin of safety.</p>
+      <div style="border-radius:14px;overflow:hidden;border:1px solid rgba(243,241,237,.14)">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;flex-wrap:wrap;background:rgba(29,27,24,.85);border-bottom:1px solid rgba(243,241,237,.14)">
+          <span style="font-family:ui-monospace,Menlo,monospace;font-size:13px;color:rgba(243,241,237,.65)">valuery.ai · live preview</span>
+          <a href="https://valuery.ai" target="_blank" rel="noopener noreferrer" style="color:#f3f1ed;font-size:13px;white-space:nowrap">Open website ↗</a>
+        </div>
+        <div data-project-preview style="position:relative;overflow:hidden;aspect-ratio:16/10;background:#f7f5f2">
+          <iframe src="https://valuery.ai" title="Valuery live website preview" width="1440" height="900" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;inset:0 auto auto 0;display:block;border:0;transform-origin:top left"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
   <section style="padding:88px 56px 80px;max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box" data-reveal="1">
     <h3 style="margin:0 0 28px;font-size:26px;font-weight:600;letter-spacing:-.01em">Other experiments</h3>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px">
+    <div style="display:grid;grid-template-columns:1fr;gap:20px">
       <a href="https://sunlanchang.com/buzi" style="border:1px solid rgba(33,31,28,.12);border-radius:14px;padding:26px;background:#fdfcfa;display:flex;flex-direction:column;gap:10px" style-hover="border-color:rgba(33,31,28,.3);color:#211f1c"><span style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(33,31,28,.5)"><span style="width:7px;height:7px;border-radius:99px;background:oklch(0.72 0.13 320);display:inline-block"></span>Live</span><span style="font-size:18px;font-weight:600">Buzi</span><span style="font-size:14px;line-height:1.5;color:rgba(33,31,28,.55)">An AI SEO assistant for independent site owners to find opportunities and grow organic traffic.</span></a>
-      <a href="https://valuery.ai" style="border:1px solid rgba(33,31,28,.12);border-radius:14px;padding:26px;background:#fdfcfa;display:flex;flex-direction:column;gap:10px" style-hover="border-color:rgba(33,31,28,.3);color:#211f1c"><span style="display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(33,31,28,.5)"><span style="width:7px;height:7px;border-radius:99px;background:oklch(0.72 0.13 60);display:inline-block"></span>In progress</span><span style="font-size:18px;font-weight:600">Valuery</span><span style="font-size:14px;line-height:1.5;color:rgba(33,31,28,.55)">Assess option-selling opportunities in businesses you understand.</span></a>
     </div>
   </section>
   <section id="notes" style="padding:0 56px 88px;max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:56px" data-reveal="1">
@@ -84,7 +101,7 @@ class Component extends DCLogic {
     this._previewObserver = new ResizeObserver(entries => entries.forEach(entry => {
       entry.target.querySelector('iframe').style.transform = `scale(${entry.contentRect.width / 1440})`;
     }));
-    document.querySelectorAll('[data-ciyo-preview]').forEach(el => this._previewObserver.observe(el));
+    document.querySelectorAll('[data-project-preview]').forEach(el => this._previewObserver.observe(el));
     if ((this.props.motion ?? true) === false) return;
     const els = document.querySelectorAll("[data-reveal]");
     els.forEach(el => { el.style.opacity = "0"; el.style.transform = "translateY(18px)"; el.style.transition = "opacity .7s ease, transform .7s ease"; });

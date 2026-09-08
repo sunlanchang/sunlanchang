@@ -33,7 +33,7 @@
 
   /* Accents — one per product, same chroma and lightness */
   --accent-ciyo: oklch(0.72 0.13 250);
-  --accent-options: oklch(0.72 0.13 60);
+  --accent-valuery: oklch(0.72 0.13 60);
   --accent-buzi: oklch(0.72 0.13 320);
   --link-hover: oklch(0.55 0.09 250);
 
