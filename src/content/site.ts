@@ -23,10 +23,9 @@ export const ciyo = {
   url: "https://ciyo.ai",
   linkLabel: "ciyo.ai →",
   lede: "An AI creative workspace where anyone can turn an idea into logos, images, and videos — no design background needed.",
-  // Path (under /public) to a real 16:8 product screenshot, e.g.
-  // "/ciyo-screenshot.png". `null` keeps the striped placeholder.
-  screenshot: null as string | null,
-  screenshotAlt: "Ciyo — AI creative workspace",
+  previewLabel: "ciyo.ai · live preview",
+  previewTitle: "Ciyo live website preview",
+  previewLinkLabel: "Open website ↗",
   facts: [
     {
       label: "Hypothesis",
@@ -61,11 +60,12 @@ export const experiments: Experiment[] = [
     href: "https://sunlanchang.com/buzi",
   },
   {
-    name: "Options Premium Explorer",
+    name: "Valuery",
     status: "In progress",
     accent: "options",
     description:
       "Assess option-selling opportunities in businesses you understand.",
+    href: "https://valuery.ai",
   },
 ];
 

@@ -1,4 +1,8 @@
+import { useEffect, useRef, useState } from "react";
 import { ciyo } from "#/content/site";
+
+const PREVIEW_WIDTH = 1440;
+const PREVIEW_HEIGHT = 900;
 
 export function CiyoBand() {
   return (
@@ -15,7 +19,7 @@ export function CiyoBand() {
           </a>
         </div>
         <p className="band__lede">{ciyo.lede}</p>
-        <CiyoShot />
+        <CiyoPreview />
         <div className="band__facts">
           {ciyo.facts.map((fact) => (
             <div className="fact" key={fact.label}>
@@ -29,26 +33,48 @@ export function CiyoBand() {
   );
 }
 
-function CiyoShot() {
-  if (ciyo.screenshot) {
-    return (
-      <img
-        className="shot shot--image"
-        src={ciyo.screenshot}
-        alt={ciyo.screenshotAlt}
-        width={1600}
-        height={800}
-        loading="lazy"
-      />
-    );
-  }
+function CiyoPreview() {
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+
+    // Keep Ciyo's desktop layout while fitting the preview to any screen.
+    const observer = new ResizeObserver(([entry]) => {
+      setScale(entry.contentRect.width / PREVIEW_WIDTH);
+    });
+    observer.observe(viewport);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div
-      className="shot shot--placeholder"
-      role="img"
-      aria-label="Ciyo product screenshot (placeholder)"
-    >
-      <span className="shot__label">ciyo.ai — product screenshot</span>
+    <div className="shot">
+      <div className="shot__toolbar">
+        <span className="shot__label">{ciyo.previewLabel}</span>
+        <a
+          className="shot__link"
+          href={ciyo.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {ciyo.previewLinkLabel}
+        </a>
+      </div>
+      <div className="shot__viewport" ref={viewportRef}>
+        <iframe
+          className="shot__frame"
+          src={ciyo.url}
+          title={ciyo.previewTitle}
+          width={PREVIEW_WIDTH}
+          height={PREVIEW_HEIGHT}
+          loading="lazy"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+          referrerPolicy="strict-origin-when-cross-origin"
+          style={{ transform: `scale(${scale})` }}
+        />
+      </div>
     </div>
   );
 }

@@ -31,8 +31,8 @@ The files in this bundle are **design references created in HTML** — they show
 ## Screens / Views — Homepage
 1. **Nav** — "LS" wordmark left (15px/600); right: Work · Notes · About (14px, `rgba(33,31,28,.7)`, anchor links) + "EN / 中文" language switch (12px). 22px vertical padding.
 2. **Hero** — h1 84px/1.02, letter-spacing -.035em, weight 600, max-width 900px: "I explore ideas by building products." Below (flex, gap 40px): intro paragraph 18px secondary max-width 460px ("Lanchang Sun — product builder, former Microsoft engineer, student of durable businesses.") + monospace "SUNLANCHANG.COM" 12px. Padding 110px top / 100px bottom.
-3. **Ciyo dark band** (full-bleed `#1d1b18`, inner 1180px, 88px vertical padding) — header row: 8px blue status dot + "Ciyo" 44px/600 + "BUILDING NOW" uppercase 13px letter-spacing .1em at 45% opacity; right: "ciyo.ai →" link in blue accent. One-liner 19px max-width 600px. Product screenshot: 16/8 aspect, radius 14px, 1px light border — **placeholder in the reference; replace with a real Ciyo screenshot**. Below: three columns (flex, gap 56px, max-width 240px each) — Hypothesis / Exists today / Testing, uppercase 12px labels + 14px body.
-4. **Other experiments** — h3 26px/600, 2-col grid gap 20px. Two projects: Buzi (the AI SEO assistant) and Options Premium Explorer. Cards: `#fdfcfa`, 1px border, radius 14px, padding 26px; status dot + label 12px, name 18px/600, desc 14px/1.5. Buzi card is a link to `https://sunlanchang.com/buzi` (hover: border darkens).
+3. **Ciyo dark band** (full-bleed `#1d1b18`, inner 1180px, 88px vertical padding) — header row: 8px blue status dot + "Ciyo" 44px/600 + "BUILDING NOW" uppercase 13px letter-spacing .1em at 45% opacity; right: "ciyo.ai →" link in blue accent. One-liner 19px max-width 600px. Live website preview: sandboxed, lazy-loaded iframe of `https://ciyo.ai`, 1440×900 desktop viewport scaled to fit a 16/10 panel. Radius 14px, 1px light border, toolbar with “ciyo.ai · live preview” and an “Open website ↗” link opening a new tab. Below: three columns (flex, gap 56px, max-width 240px each) — Hypothesis / Exists today / Testing, uppercase 12px labels + 14px body.
+4. **Other experiments** — h3 26px/600, 2-col grid gap 20px. Two projects: Buzi (the AI SEO assistant) and Valuery (the options premium explorer). Cards: `#fdfcfa`, 1px border, radius 14px, padding 26px; status dot + label 12px, name 18px/600, desc 14px/1.5. Buzi links to `https://sunlanchang.com/buzi`; Valuery links to `https://valuery.ai` (hover: border darkens).
 5. **Notes + About** — 2-col grid gap 56px. Notes: h3 26px, hairline-separated rows (14px vertical padding): title 16px link left, date 13px tertiary right. About: h3 26px + paragraph 16px/1.65 at 65% opacity (exact copy in reference, ends "You can call me Chris.").
 6. **Footer** — hairline top; "© 2026 Lanchang Sun" left; right: `sunlanchang@outlook.com` (mailto) and `@chris___sun` → `https://x.com/chris___sun`, 13px at 50–60% opacity.
 
@@ -43,8 +43,8 @@ The files in this bundle are **design references created in HTML** — they show
 - EN / 中文 switch is a visual affordance in v1; wire real i18n only when 中文 content exists.
 
 ## State Management
-None beyond the reveal observer. All content static/prerendered. Notes list ← MDX frontmatter (title, date) when wired.
+Reveal observer and ResizeObserver for fitting the Ciyo preview to its container. All content static/prerendered. Notes list ← MDX frontmatter (title, date) when wired.
 
 ## Assets
-- No images shipped. The Ciyo screenshot area is a striped CSS placeholder — replace with a real product shot (16:8 crop).
-- Status dots and stripes are pure CSS; no icon set required.
+- No images shipped. The Ciyo preview renders the real website in an iframe; the destination must permit embedding.
+- Status dots are pure CSS; no icon set required.
